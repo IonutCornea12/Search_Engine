@@ -1,0 +1,10 @@
+2025-03-18 22:03:04.186480 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-18 22:03:04.189798 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-18 22:03:04.191015 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-18 22:03:04.192364 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-18 22:03:04.193623 [SUMMARY] Indexing Summary - Timestamp: 2025-03-18 22:03:04.193611. Total files processed: 4. Errors: 0.
+2025-03-18 22:12:15.640973 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-18 22:12:15.644512 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-18 22:12:15.645451 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-18 22:12:15.646059 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-18 22:12:15.646670 [SUMMARY] Indexing Summary - Timestamp: 2025-03-18 22:12:15.646665. Total files processed: 0. Errors: 0.
