@@ -1,0 +1,8 @@
+{
+    "ignore_patterns": [
+        ".git",
+        "__pycache__",
+        "Pictures"
+
+    ]
+}

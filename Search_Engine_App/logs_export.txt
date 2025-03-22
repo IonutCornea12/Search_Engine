@@ -1,10 +1,169 @@
-2025-03-18 22:03:04.186480 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
-2025-03-18 22:03:04.189798 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
-2025-03-18 22:03:04.191015 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
-2025-03-18 22:03:04.192364 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
-2025-03-18 22:03:04.193623 [SUMMARY] Indexing Summary - Timestamp: 2025-03-18 22:03:04.193611. Total files processed: 4. Errors: 0.
-2025-03-18 22:12:15.640973 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
-2025-03-18 22:12:15.644512 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
-2025-03-18 22:12:15.645451 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
-2025-03-18 22:12:15.646059 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
-2025-03-18 22:12:15.646670 [SUMMARY] Indexing Summary - Timestamp: 2025-03-18 22:12:15.646665. Total files processed: 0. Errors: 0.
+2025-03-22 19:20:49.480876 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-03-22 19:20:49.483576 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-03-22 19:20:49.484522 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy-2.0.39.dist-info/top_level.txt
+2025-03-22 19:20:49.485401 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/psycopg2_binary-2.9.10.dist-info/top_level.txt
+2025-03-22 19:20:49.486235 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-03-22 19:20:49.487077 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-03-22 19:20:49.487949 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+2025-03-22 19:20:49.488796 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
+2025-03-22 19:20:49.490221 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
+2025-03-22 19:20:49.491612 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:20:49.492494 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
+2025-03-22 19:20:49.493270 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
+2025-03-22 19:20:49.494042 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-22 19:20:49.494788 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-22 19:20:49.495415 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-22 19:20:49.496051 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-22 19:20:49.496684 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-22 19:20:49.497341 [SUMMARY] Indexing Summary - Timestamp: 2025-03-22 19:20:49.497336. Total files processed: 17. Errors: 0.
+
+2025-03-22 19:21:05.835083 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-03-22 19:21:05.837617 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-03-22 19:21:05.838407 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy-2.0.39.dist-info/top_level.txt
+2025-03-22 19:21:05.839142 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/psycopg2_binary-2.9.10.dist-info/top_level.txt
+2025-03-22 19:21:05.840714 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-03-22 19:21:05.842722 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-03-22 19:21:05.843602 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+2025-03-22 19:21:05.844344 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
+2025-03-22 19:21:05.845005 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
+2025-03-22 19:21:05.845625 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:21:05.846241 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
+2025-03-22 19:21:05.846835 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
+2025-03-22 19:21:05.847471 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-22 19:21:05.848116 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-22 19:21:05.848791 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-22 19:21:05.849424 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-22 19:21:05.849971 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-22 19:21:05.850613 [SUMMARY] Indexing Summary - Timestamp: 2025-03-22 19:21:05.850607. Total files processed: 1. Errors: 0.
+
+2025-03-22 19:22:14.541714 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-03-22 19:22:14.543770 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-03-22 19:22:14.544525 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy-2.0.39.dist-info/top_level.txt
+2025-03-22 19:22:14.545233 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/psycopg2_binary-2.9.10.dist-info/top_level.txt
+2025-03-22 19:22:14.545914 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-03-22 19:22:14.546595 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-03-22 19:22:14.547299 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+2025-03-22 19:22:14.548204 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
+2025-03-22 19:22:14.549022 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
+2025-03-22 19:22:14.549689 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:22:14.550373 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
+2025-03-22 19:22:14.550992 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
+2025-03-22 19:22:14.551861 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-22 19:22:14.552556 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-22 19:22:14.553157 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-22 19:22:14.553762 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-22 19:22:14.554360 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-22 19:22:14.555098 [SUMMARY] Indexing Summary - Timestamp: 2025-03-22 19:22:14.555093. Total files processed: 2. Errors: 0.
+
+2025-03-22 19:25:14.372779 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-03-22 19:25:14.375134 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-03-22 19:25:14.375945 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy-2.0.39.dist-info/top_level.txt
+2025-03-22 19:25:14.376760 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/psycopg2_binary-2.9.10.dist-info/top_level.txt
+2025-03-22 19:25:14.377511 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-03-22 19:25:14.378286 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-03-22 19:25:14.378951 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+2025-03-22 19:25:14.379807 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
+2025-03-22 19:25:14.380487 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
+2025-03-22 19:25:14.381112 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:25:14.381754 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
+2025-03-22 19:25:14.382383 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
+2025-03-22 19:25:14.383030 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-22 19:25:14.383674 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-22 19:25:14.384349 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-22 19:25:14.384991 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-22 19:25:14.385668 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-22 19:25:14.386339 [SUMMARY] Indexing Summary - Timestamp: 2025-03-22 19:25:14.386335. Total files processed: 1. Errors: 0.
+
+2025-03-22 19:25:35.549984 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-03-22 19:25:35.553040 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-03-22 19:25:35.553967 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy-2.0.39.dist-info/top_level.txt
+2025-03-22 19:25:35.554799 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/psycopg2_binary-2.9.10.dist-info/top_level.txt
+2025-03-22 19:25:35.555521 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-03-22 19:25:35.556151 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-03-22 19:25:35.556783 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+2025-03-22 19:25:35.557412 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
+2025-03-22 19:25:35.558014 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
+2025-03-22 19:25:35.558619 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:25:35.559399 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
+2025-03-22 19:25:35.560219 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
+2025-03-22 19:25:35.561356 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-22 19:25:35.562110 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-22 19:25:35.562828 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-22 19:25:35.563531 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-22 19:25:35.564178 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-22 19:25:35.564821 [SUMMARY] Indexing Summary - Timestamp: 2025-03-22 19:25:35.564815. Total files processed: 1. Errors: 0.
+
+2025-03-22 19:25:47.992143 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-03-22 19:25:47.994461 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-03-22 19:25:47.995340 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy-2.0.39.dist-info/top_level.txt
+2025-03-22 19:25:47.996145 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/psycopg2_binary-2.9.10.dist-info/top_level.txt
+2025-03-22 19:25:47.996854 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-03-22 19:25:47.997677 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-03-22 19:25:47.998472 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+2025-03-22 19:25:47.999233 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
+2025-03-22 19:25:47.999989 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
+2025-03-22 19:25:48.000733 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:25:48.002797 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
+2025-03-22 19:25:48.003413 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
+2025-03-22 19:25:48.004023 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-22 19:25:48.004661 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-22 19:25:48.005272 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-22 19:25:48.005865 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-22 19:25:48.006472 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-22 19:25:48.007074 [SUMMARY] Indexing Summary - Timestamp: 2025-03-22 19:25:48.007066. Total files processed: 1. Errors: 0.
+
+2025-03-22 19:27:02.038446 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-03-22 19:27:02.040509 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-03-22 19:27:02.041345 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy-2.0.39.dist-info/top_level.txt
+2025-03-22 19:27:02.042111 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/psycopg2_binary-2.9.10.dist-info/top_level.txt
+2025-03-22 19:27:02.043277 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-03-22 19:27:02.044089 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-03-22 19:27:02.044821 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+2025-03-22 19:27:02.045536 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
+2025-03-22 19:27:02.046250 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
+2025-03-22 19:27:02.046911 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:27:02.047567 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
+2025-03-22 19:27:02.048370 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
+2025-03-22 19:27:02.049049 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-22 19:27:02.049706 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-22 19:27:02.050383 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-22 19:27:02.051111 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-22 19:27:02.051764 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-22 19:27:02.052374 [SUMMARY] Indexing Summary - Timestamp: 2025-03-22 19:27:02.052369. Total files processed: 1. Errors: 0.
+
+2025-03-22 19:27:06.889913 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-03-22 19:27:06.891350 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-03-22 19:27:06.892182 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy-2.0.39.dist-info/top_level.txt
+2025-03-22 19:27:06.893145 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/psycopg2_binary-2.9.10.dist-info/top_level.txt
+2025-03-22 19:27:06.894428 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-03-22 19:27:06.895443 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-03-22 19:27:06.896502 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+2025-03-22 19:27:06.897473 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
+2025-03-22 19:27:06.898386 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
+2025-03-22 19:27:06.899178 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:27:06.899962 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
+2025-03-22 19:27:06.900742 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
+2025-03-22 19:27:06.901561 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-22 19:27:06.902324 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-22 19:27:06.903091 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-22 19:27:06.903724 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-22 19:27:06.904353 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-22 19:27:06.904963 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-03-22 19:27:06.905660 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-03-22 19:27:06.906358 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy-2.0.39.dist-info/top_level.txt
+2025-03-22 19:27:06.906995 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/psycopg2_binary-2.9.10.dist-info/top_level.txt
+2025-03-22 19:27:06.907632 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-03-22 19:27:06.908269 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-03-22 19:27:06.908908 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+2025-03-22 19:27:06.909558 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
+2025-03-22 19:27:06.910616 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
+2025-03-22 19:27:06.911280 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:27:06.911903 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
+2025-03-22 19:27:06.912727 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
+2025-03-22 19:27:06.913338 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-22 19:27:06.913948 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-22 19:27:06.914545 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-22 19:27:06.915142 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-22 19:27:06.915728 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-22 19:27:06.916344 [SUMMARY] Indexing Summary - Timestamp: 2025-03-22 19:27:06.916338. Total files processed: 2. Errors: 0.
+
