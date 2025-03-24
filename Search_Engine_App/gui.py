@@ -6,10 +6,13 @@ from filecrawler import FileCrawler
 from textextractor import TextExtractor
 from indexer import Indexer
 from database import DatabaseAdapter
+from config import Config
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.config = Config("config.json")
+        self.stored_ignore_patterns = self.config.get_ignore_patterns()
         self.setWindowTitle("Local File Search Engine")
         self.setGeometry(100, 100, 900, 700)
         # Database connection user ionutcornea, pass ionutcornea
@@ -90,15 +93,18 @@ class MainWindow(QMainWindow):
             self.dir_label.setText(f"Selected: {folder}")
             self.selected_folder = folder
             self.crawler = FileCrawler()
-    # Start the indexing process
-    def start_indexing(self):
-        if hasattr(self, 'selected_folder'): #retunrs if it has atribute with that name
-            # Read ignore patterns from GUI
-            ignore_patterns = [
-                pattern.strip() for pattern in self.ignore_patterns_input.text().strip().split(',') if pattern.strip()
-            ]
 
-            self.crawler = FileCrawler(ignore_patterns)
+
+    def start_indexing(self):
+        if hasattr(self, 'selected_folder'):
+            user_ignore_patterns = [
+                pattern.strip()
+                for pattern in self.ignore_patterns_input.text().split(',')
+                if pattern.strip()
+            ]
+            combined_patterns = self.stored_ignore_patterns + user_ignore_patterns
+            self.crawler = FileCrawler(combined_patterns)
+
             files = self.crawler.crawl(self.selected_folder)
             if files:
                 self.indexer.process_files(files)

@@ -20,19 +20,13 @@ class FileCrawler:
             ]
 
             for file in files:
-                file_path = os.path.join(root, file)
-                _, ext = os.path.splitext(file)
-
-                # Normalize extensions for consistent matching
-                ext = ext.lower()
-                # Separate matching logic for filenames and extensions
-                ignore_match = any(fnmatch.fnmatch(file, pattern) for pattern in self.ignore_patterns)
-                ext_match = any(pattern.lstrip('*') == ext for pattern in self.ignore_patterns)
-
-                if ignore_match or ext_match:
+                if not file.lower().endswith('.txt'):
                     continue
 
-                if file.lower().endswith('.txt'):
-                    file_paths.append(os.path.join(root, file))
+                # Skip file if it matches an ignore pattern
+                if any(fnmatch.fnmatch(file, pattern) for pattern in self.ignore_patterns):
+                    continue
+
+                file_paths.append(os.path.join(root, file))
 
         return file_paths
