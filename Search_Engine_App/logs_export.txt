@@ -45,7 +45,7 @@
 2025-03-22 19:22:14.547299 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
 2025-03-22 19:22:14.548204 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt
 2025-03-22 19:22:14.549022 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt
-2025-03-22 19:22:14.549689 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
+2025-03-22 19:22:14.549689 [INFO] Skipped nchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt
 2025-03-22 19:22:14.550373 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt
 2025-03-22 19:22:14.550992 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/.venv/lib/python3.12/site-packages/PyQt6-6.8.1.dist-info/entry_points.txt
 2025-03-22 19:22:14.551861 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
@@ -166,4 +166,11 @@
 2025-03-22 19:27:06.915142 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
 2025-03-22 19:27:06.915728 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
 2025-03-22 19:27:06.916344 [SUMMARY] Indexing Summary - Timestamp: 2025-03-22 19:27:06.916338. Total files processed: 2. Errors: 0.
+
+2025-03-24 10:47:48.878780 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-03-24 10:47:48.887207 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-03-24 10:47:48.888760 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-03-24 10:47:48.890327 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-03-24 10:47:48.891636 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-03-24 10:47:48.893502 [SUMMARY] Indexing Summary - Timestamp: 2025-03-24 10:47:48.893483. Total files processed: 0. Errors: 0.
 

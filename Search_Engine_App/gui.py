@@ -136,7 +136,7 @@ class MainWindow(QMainWindow):
                 )
                 self.results_list.addItem(display_text)
         else:
-            self.self.results_list.addItem("Enter a search query.")
+            self.results_list.addItem("Enter a search query.")
 
     def size_in_range(self, size, range_text):
         if range_text == "Any size":
