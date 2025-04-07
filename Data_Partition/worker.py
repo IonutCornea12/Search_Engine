@@ -26,6 +26,7 @@ class Worker:
                     "worker_id": self.worker_id,
                     "results": results
                 })
+                print(f"[Worker {self.worker_id}] Sending response: {response}")
                 self.conn.send(response)
 
             elif command == "exit":
