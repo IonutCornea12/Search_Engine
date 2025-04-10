@@ -1,6 +1,7 @@
-.idea
+.idea/
 **/.DS_Store
 Search_Engine_App/.DS_Store
 /Search_Engine_App/venv
 **/__pycache__/
-
+__pycache__/
+*.pyc
