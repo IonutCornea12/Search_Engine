@@ -3,5 +3,6 @@
         ".git",
         "__pycache__",
         ".venv"
-    ]
+    ],
+    "report_format": "csv"
 }

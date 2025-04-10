@@ -56,3 +56,5 @@ class Indexer:
         # Automatically export logs to a file after indexing
         export_logs_to_txt(self.db_adapter)
         print("Logs have been automatically exported.")
+
+        self.db_adapter.export_index_report(filename="index_report")

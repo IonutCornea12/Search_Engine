@@ -1,0 +1,30 @@
+file_path,file_name,extension,file_size,path_score,last_modified
+"/Users/ionutcornea12/Documents/GitHub/GP_Project/GP Project/Build/Intermediates.noindex/ArchiveIntermediates/gp_project/IntermediateBuildFilesPath/XCBuildData/bd9e99a7a7f631f5d6db3443aea49490.xcbuilddata/target-graph.txt","target-graph.txt",".txt",89,0.0,1736805689.258033
+"/Users/ionutcornea12/Documents/GitHub/GP_Project/GP Project/Build/Intermediates.noindex/XCBuildData/10c3380860d18eb59e6b877ca237f9c2.xcbuilddata/target-graph.txt","target-graph.txt",".txt",89,29.5,1736805685.9130113
+"/Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/CMakeLists.txt","CMakeLists.txt",".txt",426,55.5,1743521974.3081324
+"/Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-debug/CMakeCache.txt","CMakeCache.txt",".txt",15238,46.5,1743521991.2824676
+"/Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-debug/CMakeFiles/TargetDirectories.txt","TargetDirectories.txt",".txt",433,37.5,1743522066.39262
+"/Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-debug/CMakeFiles/clion-Debug-log.txt","clion-Debug-log.txt",".txt",598,38.5,1743522067.1104808
+"/Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-debug/CMakeFiles/clion-environment.txt","clion-environment.txt",".txt",195,37.5,1743522066.2180219
+"/Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-release/CMakeCache.txt","CMakeCache.txt",".txt",15338,45.5,1743522066.380761
+"/Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-release/CMakeFiles/TargetDirectories.txt","TargetDirectories.txt",".txt",439,36.5,1743522066.3926194
+"/Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-release/CMakeFiles/clion-Release-log.txt","clion-Release-log.txt",".txt",709,36.5,1743522067.111317
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt","Test1.txt",".txt",40,66.5,1742662868.8140178
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt","Test2.txt",".txt",7,66.5,1742237273.9438257
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt","Test3.txt",".txt",11,66.5,1742664128.7659292
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt","Test4.txt",".txt",19,66.5,1742827292.5549803
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt","Test5.txt",".txt",47,66.5,1742827655.3042269
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt","logs_export.txt",".txt",5648,67.5,1744319911.984826
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt","requirements.txt",".txt",32,67.0,1742325996.6545553
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/PyQt6-6.9.0.dist-info/entry_points.txt","entry_points.txt",".txt",86,39.0,1744314330.1248705
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt","top_level.txt",".txt",6,37.5,1744314330.1199107
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip-25.0.1.dist-info/AUTHORS.txt","AUTHORS.txt",".txt",11018,42.0,1744314337.6335464
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip-25.0.1.dist-info/LICENSE.txt","LICENSE.txt",".txt",1093,42.0,1744314337.6336758
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip-25.0.1.dist-info/entry_points.txt","entry_points.txt",".txt",87,39.5,1744314337.634065
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip-25.0.1.dist-info/top_level.txt","top_level.txt",".txt",4,41.0,1744314337.6341863
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt","vendor.txt",".txt",333,47.0,1744314337.5931675
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/psycopg2-2.9.10.dist-info/top_level.txt","top_level.txt",".txt",9,38.5,1744314437.1649256
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/setuptools-65.5.0.dist-info/entry_points.txt","entry_points.txt",".txt",2740,36.0,1744314269.289479
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/setuptools-65.5.0.dist-info/top_level.txt","top_level.txt",".txt",41,37.5,1744314269.2895672
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/sqlalchemy-2.0.40.dist-info/top_level.txt","top_level.txt",".txt",11,37.5,1744314358.63574
+"/Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt","type_migration_guidelines.txt",".txt",8239,33.5,1744314358.6057246

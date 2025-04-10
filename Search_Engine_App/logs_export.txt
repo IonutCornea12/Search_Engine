@@ -1,17 +1,32 @@
-2025-03-24 18:03:57.134559 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
-2025-03-24 18:03:57.137163 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
-2025-03-24 18:03:57.138540 [SUMMARY] Indexing Summary - Timestamp: 2025-03-24 18:03:57.138526. Total files processed: 2. Errors: 0.
-
-2025-03-24 18:04:14.250492 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
-2025-03-24 18:04:14.254280 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
-2025-03-24 18:04:14.255498 [SUMMARY] Indexing Summary - Timestamp: 2025-03-24 18:04:14.255485. Total files processed: 1. Errors: 0.
-
-2025-03-24 18:04:26.636141 [INFO] Skipped unchanged file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
-2025-03-24 18:04:26.638643 [INFO] Updated file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
-2025-03-24 18:04:26.639741 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
-2025-03-24 18:04:26.640858 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
-2025-03-24 18:04:26.641976 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
-2025-03-24 18:04:26.643154 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
-2025-03-24 18:04:26.644587 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
-2025-03-24 18:04:26.645842 [SUMMARY] Indexing Summary - Timestamp: 2025-03-24 18:04:26.645833. Total files processed: 6. Errors: 0.
+2025-04-11 00:20:21.081700 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/requirements.txt
+2025-04-11 00:20:21.082853 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/logs_export.txt
+2025-04-11 00:20:21.083605 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test4.txt
+2025-04-11 00:20:21.084876 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test5.txt
+2025-04-11 00:20:21.086239 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test1.txt
+2025-04-11 00:20:21.086970 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test2.txt
+2025-04-11 00:20:21.087571 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/TestDir/Test3.txt
+2025-04-11 00:20:21.088107 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/PyQt6-6.9.0.dist-info/entry_points.txt
+2025-04-11 00:20:21.088867 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/PyQt6_sip-13.10.0.dist-info/top_level.txt
+2025-04-11 00:20:21.089450 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt
+2025-04-11 00:20:21.090036 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/setuptools-65.5.0.dist-info/entry_points.txt
+2025-04-11 00:20:21.090589 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/setuptools-65.5.0.dist-info/top_level.txt
+2025-04-11 00:20:21.091314 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip-25.0.1.dist-info/entry_points.txt
+2025-04-11 00:20:21.093112 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip-25.0.1.dist-info/top_level.txt
+2025-04-11 00:20:21.093858 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip-25.0.1.dist-info/LICENSE.txt
+2025-04-11 00:20:21.094597 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip-25.0.1.dist-info/AUTHORS.txt
+2025-04-11 00:20:21.095332 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+2025-04-11 00:20:21.095987 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/psycopg2-2.9.10.dist-info/top_level.txt
+2025-04-11 00:20:21.096628 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/Search_Engine/Search_Engine_App/venv/lib/python3.11/site-packages/sqlalchemy-2.0.40.dist-info/top_level.txt
+2025-04-11 00:20:21.097965 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/GP_Project/GP Project/Build/Intermediates.noindex/ArchiveIntermediates/gp_project/IntermediateBuildFilesPath/XCBuildData/bd9e99a7a7f631f5d6db3443aea49490.xcbuilddata/target-graph.txt
+2025-04-11 00:20:21.100673 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/GP_Project/GP Project/Build/Intermediates.noindex/XCBuildData/10c3380860d18eb59e6b877ca237f9c2.xcbuilddata/target-graph.txt
+2025-04-11 00:20:21.101425 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/CMakeLists.txt
+2025-04-11 00:20:21.102429 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-debug/CMakeCache.txt
+2025-04-11 00:20:21.105285 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-debug/CMakeFiles/clion-Debug-log.txt
+2025-04-11 00:20:21.107339 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-debug/CMakeFiles/TargetDirectories.txt
+2025-04-11 00:20:21.109082 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-debug/CMakeFiles/clion-environment.txt
+2025-04-11 00:20:21.109750 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-release/CMakeCache.txt
+2025-04-11 00:20:21.110524 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-release/CMakeFiles/TargetDirectories.txt
+2025-04-11 00:20:21.111205 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-release/CMakeFiles/clion-environment.txt
+2025-04-11 00:20:21.112027 [INFO] Indexed new file: /Users/ionutcornea12/Documents/GitHub/License-Plate-Recognition-System/LicensePlateRecognition/cmake-build-release/CMakeFiles/clion-Release-log.txt
+2025-04-11 00:20:21.112724 [SUMMARY] Indexing Summary - Timestamp: 2025-04-11 00:20:21.112717. Total files processed: 30. Errors: 0.
 

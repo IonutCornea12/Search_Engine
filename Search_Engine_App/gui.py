@@ -1,12 +1,13 @@
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QLineEdit,
-    QPushButton, QListWidget, QFileDialog, QLabel, QHBoxLayout, QStatusBar, QComboBox, QDateEdit, QSizePolicy
+    QPushButton, QListWidget, QFileDialog, QLabel, QHBoxLayout, QStatusBar, QComboBox
 )
 from filecrawler import FileCrawler
 from textextractor import TextExtractor
 from indexer import Indexer
 from database import DatabaseAdapter
 from config import Config
+from query_parser import parse_query
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -15,17 +16,19 @@ class MainWindow(QMainWindow):
         self.stored_ignore_patterns = self.config.get_ignore_patterns()
         self.setWindowTitle("Local File Search Engine")
         self.setGeometry(100, 100, 900, 700)
-        # Database connection user ionutcornea, pass ionutcornea
+
+        # Database connection user: ionutcornea, pass: ionutcornea
         db_url = "postgresql+psycopg2://ionutcornea:ionutcornea@localhost/search_engine_db"
         self.db = DatabaseAdapter(db_url)
         self.indexer = Indexer(self.db, TextExtractor())
-
+        self.log_query = True
+        self.last_logged_query = None
+        self.last_logged_result_count = None
         self.init_ui()
 
     def init_ui(self):
         self.layout = QVBoxLayout()
 
-        # Display selected directory
         self.dir_label = QLabel("Directory to Index:")
         self.layout.addWidget(self.dir_label)
 
@@ -33,17 +36,21 @@ class MainWindow(QMainWindow):
         self.select_button.clicked.connect(self.select_folder)
         self.layout.addWidget(self.select_button)
 
-        # Button to start indexing
         self.index_button = QPushButton("Start Indexing")
         self.index_button.clicked.connect(self.start_indexing)
         self.layout.addWidget(self.index_button)
 
-        # Search Bar with Filters
-        search_layout = QHBoxLayout()
+        self.suggestions_combo = QComboBox()
+        self.suggestions_combo.setPlaceholderText("Recent Searches")
+        self.suggestions_combo.activated.connect(self.on_suggestion_selected)
+        self.layout.addWidget(self.suggestions_combo)
 
+        # Search layout with filters
+        search_layout = QHBoxLayout()
         self.search_bar = QLineEdit()
         self.search_bar.setPlaceholderText("Search...")
-        self.search_bar.textChanged.connect(self.search)
+        self.search_bar.textChanged.connect(self.perform_live_search)
+        self.search_bar.returnPressed.connect(self.search)
         search_layout.addWidget(self.search_bar)
 
         self.file_type_combo = QComboBox()
@@ -54,13 +61,15 @@ class MainWindow(QMainWindow):
         self.size_range_combo.addItems(["Any size", "< 1MB", "1MB - 10MB", "> 10MB"])
         search_layout.addWidget(self.size_range_combo)
 
+        self.ignore_patterns_input = QLineEdit()
+        self.ignore_patterns_input.setPlaceholderText("Ignore Patterns (comma-separated)")
+        search_layout.addWidget(self.ignore_patterns_input)
+
         self.layout.addLayout(search_layout)
 
-        # Search Results
         self.results_list = QListWidget()
         self.layout.addWidget(self.results_list)
 
-        # Action Buttons
         action_buttons = QHBoxLayout()
 
         self.clear_button = QPushButton("Clear Results")
@@ -71,22 +80,42 @@ class MainWindow(QMainWindow):
         self.refresh_button.clicked.connect(self.start_indexing)
         action_buttons.addWidget(self.refresh_button)
 
-
-        self.ignore_patterns_input = QLineEdit()
-        self.ignore_patterns_input.setPlaceholderText("Ignore Patterns (comma-separated)")
-        search_layout.addWidget(self.ignore_patterns_input)
         self.layout.addLayout(action_buttons)
 
-        # Status Bar
         self.status_bar = QStatusBar()
         self.setStatusBar(self.status_bar)
 
-        # Add layout to window
         container = QWidget()
         container.setLayout(self.layout)
         self.setCentralWidget(container)
+        self.update_suggestions()
 
-    # Open file dialog to select a directory
+    def update_suggestions(self):
+        """
+        Pulls the last 5 queries from logs and displays them
+        in the suggestions_combo.
+        """
+        self.suggestions_combo.clear()
+        recent_queries = self.db.fetch_recent_queries(limit=5)
+        if not recent_queries:
+            self.suggestions_combo.addItem("No recent searches.")
+        else:
+            for q in recent_queries:
+                if " | results: " in q:
+                    query_text = q.split(" | results: ")[0].strip()
+                    results_count = q.split(" | results: ")[1].strip()
+                    self.suggestions_combo.addItem(f"{query_text} ({results_count})", userData=query_text)
+                else:
+                    self.suggestions_combo.addItem(q, userData=q)
+
+    def on_suggestion_selected(self, index):
+        query_text = self.suggestions_combo.currentData()
+        if query_text is None or not query_text.strip():
+            return
+        self.log_query = False
+        self.search_bar.setText(query_text)
+        self.search()
+
     def select_folder(self):
         folder = QFileDialog.getExistingDirectory(self, "Select Directory")
         if folder:
@@ -109,40 +138,69 @@ class MainWindow(QMainWindow):
             if files:
                 self.indexer.process_files(files)
                 self.indexer.generate_report()
+                self.db.export_index_report(filename="index_report")
                 self.status_bar.showMessage("Indexing completed and logged.")
             else:
                 self.status_bar.showMessage("No files found for indexing.")
         else:
             self.results_list.addItem("Please select a folder first.")
 
-    # Search the database for matching content
-    def search(self):
+    def run_search(self, query, log_query=False, update_suggestions=False):
         self.results_list.clear()
-        query = self.search_bar.text().strip()
         file_type = self.file_type_combo.currentText()
         size_range = self.size_range_combo.currentText()
 
-        if query:
-            results = self.db.search_files(query)
-
-            for file_record in results:
-                if file_type != "All" and file_record.extension != file_type:
-                    continue
-                if not self.size_in_range(file_record.file_size, size_range):
-                    continue
-                content_preview = "\n".join(
-                    file_record.content_text.splitlines()[:3]) if file_record.content_text else ""
-                display_text = (
-                        f"Name: {file_record.file_name}\n"
-                        f"Path: {file_record.file_path}\n"
-                        f"Size: {file_record.file_size} bytes\n"
-                        f"Extension: {file_record.extension}\n"
-                        f"Preview:\n{content_preview}\n"
-                        + "-" * 40
-                )
-                self.results_list.addItem(display_text)
-        else:
+        if not query:
             self.results_list.addItem("Enter a search query.")
+            return
+
+        path_terms, content_terms = parse_query(query)
+        results = self.db.search_files(path_terms=path_terms, content_terms=content_terms)
+
+        if log_query:
+            if query != self.last_logged_query or len(results) != self.last_logged_result_count:
+                self.db.insert_search_query(query, result_count=len(results))
+                self.last_logged_query = query
+                self.last_logged_result_count = len(results)
+
+        if update_suggestions:
+            self.update_suggestions()
+
+        if not results:
+            self.results_list.addItem("No matching files.")
+            return
+
+        self.status_bar.showMessage(f"{len(results)} files found.")
+
+        for record in results:
+            file_id, file_path, file_name, file_size, extension, last_modified, path_score, content_text = record
+            if file_type != "All" and extension != file_type:
+                continue
+            if not self.size_in_range(file_size, size_range):
+                continue
+            snippet = "\n".join(content_text.splitlines()[:3]) if content_text else ""
+            display_text = (
+                    f"Name: {file_name}\n"
+                    f"Path: {file_path}\n"
+                    f"Size: {file_size} bytes\n"
+                    f"Extension: {extension}\n"
+                    f"Score: {path_score}\n"
+                    f"Preview:\n{snippet}\n"
+                    + "-" * 40
+            )
+            self.results_list.addItem(display_text)
+
+    def search(self):
+        query = self.search_bar.text().strip()
+        self.run_search(query, log_query=self.log_query, update_suggestions=True)
+        self.log_query = True
+
+    def perform_live_search(self):
+        query = self.search_bar.text().strip()
+        if not query:
+            self.results_list.clear()
+            return
+        self.run_search(query)
 
     def size_in_range(self, size, range_text):
         if range_text == "Any size":
@@ -156,5 +214,5 @@ class MainWindow(QMainWindow):
 
     def clear_results(self):
         self.results_list.clear()
-
-# End of GUI
+        self.last_logged_query = None
+        self.last_logged_result_count = None
