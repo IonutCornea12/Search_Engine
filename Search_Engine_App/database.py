@@ -45,18 +45,27 @@ class LogEntry(Base):
     level = Column(String, nullable=True)                               # Log level (INFO, ERROR)
     message = Column(Text, nullable=False)                             # Log message
 
-def compute_path_score(file_path):
-
+def compute_lenght_score(file_path):
+    #compute lenght
     base_score = 100.0
     length_penalty = len(file_path) * 0.5
     score = base_score - length_penalty
 
-    # extension bonus :)
+    # extension bonus :) +10 if ends with .txt
     lower_path = file_path.lower()
     if lower_path.endswith(".txt"):
         score += 10
 
-    if score < 0:
+    if score <= 0:
+        score = 1.0
+    return score
+def compute_depth_score(file_path):
+    base_score = 100.0
+    #compute depth
+    depth_penalty = file_path.count(os.sep) * 2.5  # adjust 2.5 as needed
+    score = base_score - depth_penalty
+
+    if score <= 0:
         score = 1.0
     return score
 
@@ -67,6 +76,11 @@ class DatabaseAdapter:
         Base.metadata.create_all(self.engine)
         self.Session = scoped_session(sessionmaker(bind=self.engine))
 
+        method = config.get_ranking_method()
+        if method == "depth":
+            self.score_function = compute_depth_score
+        else:
+            self.score_function = compute_lenght_score
     def insert_or_update_file(self, file_path, file_name, file_size, extension, content, last_modified):
         session = self.Session()
         try:
@@ -83,7 +97,7 @@ class DatabaseAdapter:
                     last_modified=last_modified,
                     updated_at=datetime.now()
                 )
-                file_record.path_score = compute_path_score(file_path)
+                file_record.path_score = self.score_function(file_path)
 
                 session.add(file_record)
                 session.flush()
@@ -102,8 +116,7 @@ class DatabaseAdapter:
                     file_record.extension = extension
                     file_record.last_modified = last_modified
                     file_record.updated_at = datetime.now()
-                    file_record.path_score = compute_path_score(file_path)
-                    # Update content if available
+                    file_record.path_score = self.score_function(file_path)                    # Update content if available
                     if file_record.content:
                         file_record.content.content_text = content
                         file_record.content.updated_at = datetime.now()
@@ -141,10 +154,15 @@ class DatabaseAdapter:
             ).join(Content)
 
             # Filter by path terms
+            from sqlalchemy import or_
+
+            # Path filtering (OR if more "path:", AND if only one"path:")
             if path_terms:
-                for term in path_terms:
-                    like_term = f"%{term}%"
-                    q = q.filter(FileRecord.file_path.ilike(like_term))
+                if len(path_terms) == 1:
+                    q = q.filter(FileRecord.file_path.ilike(f"%{path_terms[0]}%"))
+                else:
+                    path_conditions = [FileRecord.file_path.ilike(f"%{term}%") for term in path_terms]
+                    q = q.filter(or_(*path_conditions))
 
             # Filter by content terms
             if content_terms:

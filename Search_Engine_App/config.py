@@ -7,7 +7,10 @@ class Config:
         self.config = {}
         self.ignore_patterns = []
         self.report_format = None
+        self.ranking_method = None
+        self.db_url = None
         self.load_config()
+
 
     def load_config(self):
         if not os.path.exists(self.config_path):
@@ -22,6 +25,8 @@ class Config:
         self.config = data
         self.ignore_patterns = data.get("ignore_patterns", [])
         self.report_format = data["report_format"]
+        self.ranking_method = data.get("ranking_method", "length")
+        self.db_url = data.get("db_url")
 
     def get_ignore_patterns(self):
         return self.ignore_patterns
@@ -31,3 +36,9 @@ class Config:
 
     def get_allowed_extensions(self):
         return self.config.get("allowed_extensions", [".txt"])
+
+    def get_ranking_method(self):
+        return self.ranking_method
+
+    def get_db_url(self):
+        return self.config.get("db_url", "")

@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import (
-    QMainWindow, QWidget, QVBoxLayout, QLineEdit,
-    QPushButton, QListWidget, QFileDialog, QLabel, QHBoxLayout, QStatusBar, QComboBox
-)
+from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QLineEdit,QPushButton, QListWidget, QFileDialog, QLabel, QHBoxLayout, QStatusBar, QComboBox)
 from filecrawler import FileCrawler
 from textextractor import TextExtractor
 from indexer import Indexer
@@ -9,7 +6,8 @@ from database import DatabaseAdapter
 from config import Config
 from query_parser import parse_query
 from export_logs import export_index_report
-
+from search_observer import (SearchObservable,QueryLoggerObserver,SuggestionUpdaterObserver)
+import time
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -19,13 +17,11 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Local File Search Engine")
         self.setGeometry(100, 100, 900, 700)
 
-        # Database connection user: ionutcornea, pass: ionutcornea
-        db_url = "postgresql+psycopg2://ionutcornea:ionutcornea@localhost/search_engine_db"
+        db_url = self.config.get_db_url()
         self.db = DatabaseAdapter(db_url, self.config)
         self.indexer = Indexer(self.db, TextExtractor(),self.config)
+        self.search_observable = SearchObservable()
         self.log_query = True
-        self.last_logged_query = None
-        self.last_logged_result_count = None
         self.init_ui()
 
     def init_ui(self):
@@ -47,6 +43,8 @@ class MainWindow(QMainWindow):
         self.suggestions_combo.activated.connect(self.on_suggestion_selected)
         self.layout.addWidget(self.suggestions_combo)
 
+        self.search_observable.register_observer(QueryLoggerObserver(self.db))
+        self.search_observable.register_observer(SuggestionUpdaterObserver(self.suggestions_combo, self.db))
         # Search layout with filters
         search_layout = QHBoxLayout()
         self.search_bar = QLineEdit()
@@ -93,10 +91,6 @@ class MainWindow(QMainWindow):
         self.update_suggestions()
 
     def update_suggestions(self):
-        """
-        Pulls the last 5 queries from logs and displays them
-        in the suggestions_combo.
-        """
         self.suggestions_combo.clear()
         recent_queries = self.db.fetch_recent_queries(limit=5)
         if not recent_queries:
@@ -139,16 +133,19 @@ class MainWindow(QMainWindow):
 
             files = self.crawler.crawl(self.selected_folder)
             if files:
+                start_time = time.time()
                 self.indexer.process_files(files)
                 self.indexer.generate_report()
-                export_index_report(self.db, self.config, filename="index_report")
-                self.status_bar.showMessage("Indexing completed and logged.")
+                duration = time.time() - start_time
+                msg = f"Indexing completed and logged in {duration:.2f} seconds. {len(files)} file(s) found."
+                self.status_bar.showMessage(msg)
+                print(msg)
             else:
                 self.status_bar.showMessage("No files found for indexing.")
         else:
             self.results_list.addItem("Please select a folder first.")
 
-    def run_search(self, query, log_query=False, update_suggestions=False):
+    def run_search(self, query, log_query=False, update_suggestions=False, notify_observers=True):
         self.results_list.clear()
         file_type = self.file_type_combo.currentText()
         size_range = self.size_range_combo.currentText()
@@ -160,11 +157,8 @@ class MainWindow(QMainWindow):
         path_terms, content_terms = parse_query(query)
         results = self.db.search_files(path_terms=path_terms, content_terms=content_terms)
 
-        if log_query:
-            if query != self.last_logged_query or len(results) != self.last_logged_result_count:
-                self.db.insert_search_query(query, result_count=len(results))
-                self.last_logged_query = query
-                self.last_logged_result_count = len(results)
+        if notify_observers:
+            self.search_observable.notify_observers(query, results)
 
         if update_suggestions:
             self.update_suggestions()
@@ -181,7 +175,7 @@ class MainWindow(QMainWindow):
                 continue
             if not self.size_in_range(file_size, size_range):
                 continue
-            snippet = "\n".join(content_text.splitlines()[:3]) if content_text else ""
+            snippet = "\n".join(content_text.splitlines()[:7]) if content_text else ""
             display_text = (
                     f"Name: {file_name}\n"
                     f"Path: {file_path}\n"
@@ -195,7 +189,7 @@ class MainWindow(QMainWindow):
 
     def search(self):
         query = self.search_bar.text().strip()
-        self.run_search(query, log_query=self.log_query, update_suggestions=True)
+        self.run_search(query, log_query=self.log_query, update_suggestions=True, notify_observers=True)
         self.log_query = True
 
     def perform_live_search(self):
@@ -203,7 +197,7 @@ class MainWindow(QMainWindow):
         if not query:
             self.results_list.clear()
             return
-        self.run_search(query)
+        self.run_search(query, log_query=False, update_suggestions=False, notify_observers=False)
 
     def size_in_range(self, size, range_text):
         if range_text == "Any size":

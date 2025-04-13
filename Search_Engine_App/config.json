@@ -1,9 +1,7 @@
 {
-    "ignore_patterns": [
-        ".git",
-        "__pycache__",
-        ".venv"
-    ],
+    "ignore_patterns": [".git", "__pycache__", ".venv"],
     "report_format": "csv",
-    "allowed_extensions": [".txt", ".csv", ".pdf", ".png", ".jpg", ".jpeg",".bmp"]
+    "allowed_extensions": [".txt", ".csv", ".pdf", ".png", ".jpg", ".jpeg",".bmp"],
+    "ranking_method": "lenght",
+    "db_url": "postgresql+psycopg2://ionutcornea:ionutcornea@localhost/search_engine_db"
 }
