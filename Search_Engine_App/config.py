@@ -28,3 +28,6 @@ class Config:
 
     def get_report_format(self):
         return self.report_format
+
+    def get_allowed_extensions(self):
+        return self.config.get("allowed_extensions", [".txt"])

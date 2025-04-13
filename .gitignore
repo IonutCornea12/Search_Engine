@@ -5,3 +5,7 @@ Search_Engine_App/.DS_Store
 **/__pycache__/
 __pycache__/
 *.pyc
+/.idea
+
+
+/Search_Engine_App/.venv

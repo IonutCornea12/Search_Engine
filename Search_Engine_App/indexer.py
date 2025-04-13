@@ -1,12 +1,14 @@
 import os
 from datetime import datetime
-from export_logs import export_logs_to_txt
+from zipimport import cp437_table
 
+from export_logs import export_logs_to_txt,export_index_report
 
 class Indexer:
-    def __init__(self, db_adapter, text_extractor):
+    def __init__(self, db_adapter, text_extractor,config):
         self.db_adapter = db_adapter
         self.text_extractor = text_extractor
+        self.config = config
         self.processed_files = 0  # Counter for processed files
         self.errors = 0           # Counter for errors
         self.report_lines = []    # Store logs for the report
@@ -57,4 +59,4 @@ class Indexer:
         export_logs_to_txt(self.db_adapter)
         print("Logs have been automatically exported.")
 
-        self.db_adapter.export_index_report(filename="index_report")
+        export_index_report(self.db_adapter, self.config, filename="index_report")

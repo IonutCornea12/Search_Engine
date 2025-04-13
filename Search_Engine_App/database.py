@@ -1,7 +1,12 @@
 from sqlalchemy import create_engine, Column,or_, Integer, String, Float, Text, DateTime, ForeignKey, Index
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, sessionmaker, scoped_session
+from sqlalchemy.orm import relationship, sessionmaker, scoped_session, joinedload
 from datetime import datetime
+from config import Config
+import pandas as pd
+from fpdf import FPDF
+import os
+
 Base = declarative_base()
 # Table to store file metadata
 class FileRecord(Base):
@@ -56,7 +61,7 @@ def compute_path_score(file_path):
     return score
 
 class DatabaseAdapter:
-    def __init__(self, db_url):
+    def __init__(self, db_url, config):
         # Create database connection
         self.engine = create_engine(db_url, pool_pre_ping=True)
         Base.metadata.create_all(self.engine)
@@ -117,7 +122,7 @@ class DatabaseAdapter:
         finally:
             session.close()
 
-    from sqlalchemy.orm import joinedload
+
 
     def search_files(self, path_terms=None, content_terms=None):
 
@@ -174,19 +179,6 @@ class DatabaseAdapter:
         try:
             record = session.query(FileRecord).filter_by(file_path=file_path).first()
             return record.last_modified if record else None
-        finally:
-            session.close()
-
-    def export_index_report(self, filename="index_report"):
-        session = self.Session()
-        try:
-            records = session.query(FileRecord).order_by(FileRecord.file_path).all()
-            out_file = f"{filename}.csv"
-            with open(out_file, "w", encoding="utf-8") as f:
-                f.write("file_path,file_name,extension,file_size,path_score,last_modified\n")
-                for r in records:
-                    f.write(f'"{r.file_path}","{r.file_name}","{r.extension}",'
-                            f'{r.file_size},{r.path_score},{r.last_modified}\n')
         finally:
             session.close()
 

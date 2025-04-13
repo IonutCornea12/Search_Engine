@@ -8,6 +8,8 @@ from indexer import Indexer
 from database import DatabaseAdapter
 from config import Config
 from query_parser import parse_query
+from export_logs import export_index_report
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -19,8 +21,8 @@ class MainWindow(QMainWindow):
 
         # Database connection user: ionutcornea, pass: ionutcornea
         db_url = "postgresql+psycopg2://ionutcornea:ionutcornea@localhost/search_engine_db"
-        self.db = DatabaseAdapter(db_url)
-        self.indexer = Indexer(self.db, TextExtractor())
+        self.db = DatabaseAdapter(db_url, self.config)
+        self.indexer = Indexer(self.db, TextExtractor(),self.config)
         self.log_query = True
         self.last_logged_query = None
         self.last_logged_result_count = None
@@ -132,13 +134,14 @@ class MainWindow(QMainWindow):
                 if pattern.strip()
             ]
             combined_patterns = self.stored_ignore_patterns + user_ignore_patterns
-            self.crawler = FileCrawler(combined_patterns)
+            allowed_extensions = self.config.get_allowed_extensions()
+            self.crawler = FileCrawler(combined_patterns, allowed_extensions)
 
             files = self.crawler.crawl(self.selected_folder)
             if files:
                 self.indexer.process_files(files)
                 self.indexer.generate_report()
-                self.db.export_index_report(filename="index_report")
+                export_index_report(self.db, self.config, filename="index_report")
                 self.status_bar.showMessage("Indexing completed and logged.")
             else:
                 self.status_bar.showMessage("No files found for indexing.")

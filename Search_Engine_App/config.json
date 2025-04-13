@@ -4,5 +4,6 @@
         "__pycache__",
         ".venv"
     ],
-    "report_format": "csv"
+    "report_format": "csv",
+    "allowed_extensions": [".txt", ".csv", ".pdf", ".png", ".jpg", ".jpeg",".bmp"]
 }

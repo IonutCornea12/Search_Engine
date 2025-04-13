@@ -1,7 +1,7 @@
 import os,fnmatch
 
 class FileCrawler:
-    def __init__(self, ignore_patterns=None):
+    def __init__(self, ignore_patterns=None,allowed_extensions = None):
         # Directories to ignore during crawling
         if ignore_patterns:
             self.ignore_patterns = [
@@ -10,6 +10,7 @@ class FileCrawler:
             ]
         else:
             self.ignore_patterns = []
+        self.allowed_extensions = allowed_extensions if allowed_extensions else [".txt"]
 
     def crawl(self, start_dir):
         file_paths = []
@@ -20,7 +21,7 @@ class FileCrawler:
             ]
 
             for file in files:
-                if not file.lower().endswith('.txt'):
+                if not any(file.lower().endswith(ext) for ext in self.allowed_extensions):
                     continue
 
                 # Skip file if it matches an ignore pattern
